@@ -236,6 +236,8 @@ function ComboBox<T extends object>(props: CubeComboBoxProps<T>, ref) {
 
   let comboBoxWidth = ref?.current?.offsetWidth;
 
+  console.log('!', ref, comboBoxWidth);
+
   let comboBoxField = (
     <Base
       ref={ref}

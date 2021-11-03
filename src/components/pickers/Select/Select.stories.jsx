@@ -78,6 +78,7 @@ const Template = ({
       defaultSelectedKey={defaultSelectedKey}
       onSelectionChange={(query) => console.log('change', query)}
       size={size}
+      width="200px"
     >
       {options.map((option) => {
         return <Select.Item key={option}>{option}</Select.Item>;
