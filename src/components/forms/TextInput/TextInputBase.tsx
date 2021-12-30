@@ -12,6 +12,7 @@ import {
   useImperativeHandle,
   useRef,
   useState,
+  useEffect,
 } from 'react';
 import { useFormProps } from '../Form/Form';
 import { useHover } from '@react-aria/interactions';
@@ -238,6 +239,12 @@ function TextInputBase(props: CubeTextInputBaseProps, ref) {
 
     inputProps.placeholder = ' ';
   }
+
+  useEffect(() => {
+    if (autoFocus) {
+      inputRef?.current?.focus();
+    }
+  }, []);
 
   let textField = (
     <Base

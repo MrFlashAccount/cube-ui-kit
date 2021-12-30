@@ -89,7 +89,7 @@ const Template = ({ isDisabled, labelPosition, requiredMark }) => {
             }),
           ]}
         >
-          <TextInput label="Text field"/>
+          <TextInput label="Text field" autoFocus/>
         </Field>
         <Field label="Custom field" tooltip="What?">
           <Block>Test</Block>
