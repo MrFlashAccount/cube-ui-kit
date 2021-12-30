@@ -242,7 +242,11 @@ function TextInputBase(props: CubeTextInputBaseProps, ref) {
 
   useEffect(() => {
     if (autoFocus) {
-      inputRef?.current?.focus();
+      setTimeout(() => {
+        if (autoFocus) {
+          inputRef?.current?.focus();
+        }
+      }, 100);
     }
   }, []);
 
